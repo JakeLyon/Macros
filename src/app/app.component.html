@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Brand</a>
+</nav>
+<div [ngClass]="SideNavClass">
+    <div class="container">
+        <div class="row">
+            <button type="button" class="btn btn-primary float-right" (click)="ToggleSideNav()">
+                <i *ngIf="this.SideNavOpen" class="fas fa-chevron-down"></i>
+                <i *ngIf="!this.SideNavOpen" class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="row">
+            <button *ngFor="let i of buttons" type="button" class="btn btn-dark btn-block" (click)="goto(i)">
+                <i [ngClass]="i.fa"></i> <span class="pl-2" *ngIf="SideNavOpen">{{ i.text }}</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="padder"></div>
+        </div>
+    </div>
+    <div class="row p-2 lpad">
+        <!-- <div class="main"> -->
+        <div [ngClass]="mainArea">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div class="row">
+        <div class="col-md-12"></div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-bottom">
+    <a class="navbar-brand" href="#">Brand</a>
+</nav>

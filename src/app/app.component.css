@@ -1,0 +1,70 @@
+.sidebar {
+    height: 100%;
+    width: 56px;
+    position: fixed;
+    z-index: 10;
+    top: 56px;
+    left: 0px;
+    background-color: #343a40;
+    overflow-x: hidden;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.sidebar.sidebar-open {
+    width: 200px;
+    left: 0px;
+    animation-name: slide;
+    animation-duration: 0.6s;
+}
+
+@keyframes slide {
+    0% {
+        width: 0px;
+        left: 0px;
+    }
+    /*25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}*/
+    70% {
+        width: 220px;
+        left: 0px;
+    }
+    85% {
+        width: 180px;
+        left: 0px;
+    }
+    100% {
+        width: 200px;
+        left: 0px;
+    }
+}
+
+.padder {
+    height: 56px;
+}
+.lpad {
+    padding-left: 56px !important;
+}
+.extra {
+    padding-left: 159px;
+    animation-name: slide2;
+    animation-duration: 0.6s;
+}
+
+@keyframes slide2 {
+    0% {
+        padding-left: 0px;
+    }
+    /*25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}*/
+    70% {
+        padding-left: 180px;
+    }
+    85% {
+        padding-left: 140px;
+    }
+    100% {
+        padding-left: 159px;
+    }
+}

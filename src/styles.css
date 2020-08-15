@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../src/assets/css/css/all.min.css';
+@import '../src/assets/bootstrap-extension.min.css';
+@import '../src/assets/bootstrap.min.css';
+@import '../node_modules/ng-drag-drop/style.css';

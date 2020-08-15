@@ -1,0 +1,14 @@
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="10" [(ngModel)]="textInput"></textarea>
+<button type="button" class="btn btn-primary" (click)="perform()">PErform</button>
+{{ this.textOutPut }}
+
+<div>
+    <h2>
+        undefined Keys
+    </h2>
+    <ul *ngIf="ukeys">
+        <li *ngFor="let i of ukeys">
+            {{ i }}
+        </li>
+    </ul>
+</div>
